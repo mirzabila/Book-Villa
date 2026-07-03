@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Book Villa</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+     <link rel="stylesheet" href="../style/contact.css">
+</head>
+<body>
+
+    <header>
+        <a href="#" class="logo"><i class="fas fa-book-open"></i> BOOK VILLA</a>
+             <ul class="nav-links">
+        <li><a href="./Home Page.html">Home</a></li>
+        <li><a href="./Products.html">Products</a></li>
+        <li><a href="./Collection.html">Collection</a></li>
+        <li><a href="./AboutUs.html">About us</a></li>
+        <li><a href="./ContactUs.html">Contact us</a></li>
+      </ul>
+        <div style="display: flex; gap: 15px;">
+            <i class="fas fa-shopping-cart" style="color: var(--text-dim);"></i>
+        </div>
+    </header>
+
+    <section class="contact-hero">
+        <h1>Let's Start a <br><span style="color: var(--primary);">Conversation.</span></h1>
+        <p>Have a question about a book edition or an order? Our academic support team is here to help you succeed.</p>
+    </section>
+
+    <div class="contact-wrapper">
+        <div class="contact-info-panel">
+            <div class="status-badge">
+                <span class="status-dot"></span> Online — Support team active
+            </div>
+            
+            <div class="info-card">
+                <i class="fas fa-envelope-open-text"></i>
+                <div>
+                    <h3>Email Support</h3>
+                    <p>Direct your queries to</p>
+                    <p style="color: #fff; font-weight: 600;">support@bookvilla.com</p>
+                </div>
+            </div>
+
+            <div class="info-card">
+                <i class="fas fa-phone-volume"></i>
+                <div>
+                    <h3>Phone Support</h3>
+                    <p>Mon - Fri (9am - 6pm)</p>
+                    <p style="color: #fff; font-weight: 600;">+92 300 1234567</p>
+                </div>
+            </div>
+
+            <div class="info-card">
+                <i class="fas fa-map-marker-alt"></i>
+                <div>
+                    <h3>Headquarters</h3>
+                    <p>Knowledge Hub Center,</p>
+                    <p style="color: #fff; font-weight: 600;">Gulberg III, Lahore, Pakistan</p>
+                </div>
+            </div>
+
+            <div style="margin-top: 20px; padding: 30px; border-radius: 24px; background: linear-gradient(135deg, rgba(244, 196, 48, 0.1) 0%, transparent 100%); border: 1px solid var(--border);">
+                <h4 style="margin-bottom: 10px;">Bulk Order Inquiries?</h4>
+                <p style="font-size: 14px; color: var(--text-dim);">Institutions and libraries can contact our sales department for special discounts.</p>
+            </div>
+        </div>
+
+        <div class="contact-form-container">
+            <h2 style="margin-bottom: 10px;">Send a Message</h2>
+            <p style="color: var(--text-dim); margin-bottom: 35px; font-size: 14px;">We typically respond within 2-4 business hours.</p>
+            
+            <form id="contactForm">
+
+                <div class="form-group">
+                    <label>FULL NAME</label>
+                    <input type="text" class="form-control" placeholder="Enter your name" required>
+                </div>
+                <div class="form-group">
+                    <label>EMAIL ADDRESS</label>
+                    <input type="email" class="form-control" placeholder="example@email.com" required>
+                </div>
+                <div class="form-group">
+                    <label>SUBJECT</label>
+                    <select class="form-control" style="appearance: none;">
+                        <option>Order Tracking</option>
+                        <option>Book Availability</option>
+                        <option>Bulk/Institutional Order</option>
+                        <option>Technical Issue</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>YOUR MESSAGE</label>
+                    <textarea class="form-control" rows="5" placeholder="How can we help you?" required></textarea>
+                </div>
+                <button type="submit" class="submit-btn">
+                    Send Message <i class="fas fa-paper-plane"></i>
+                </button>
+            </form>
+        </div>
+    </div>
+
+ 
+<div class="map-section" style="height: 450px;">
+  <iframe
+    src="https://www.google.com/maps?q=Gulberg+III+Lahore+Pakistan&output=embed"
+    width="100%"
+    height="100%"
+    style="border:0; border-radius: 24px;"
+    allowfullscreen=""
+    loading="lazy">
+  </iframe>
+</div>
+
+        
+    
+
+    <section class="social-hub">
+        <span style="color: var(--primary); font-weight: 800; letter-spacing: 2px;">STAY CONNECTED</span>
+        <h2 style="font-size: 36px; margin-top: 10px;">Follow our Book Club</h2>
+        <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+    </section>
+
+    <footer>
+        <div style="margin-bottom: 20px; font-size: 24px; font-weight: 800; color: #fff;">
+            <i class="fas fa-book-open" style="color: var(--primary);"></i> BOOK VILLA
+        </div>
+        <p style="color: var(--text-dim); font-size: 14px;">&copy; 2025 Book Villa Pakistan — All Rights Reserved. Empowering students nationwide.</p>
+    </footer>
+<script>
+  document.getElementById("contactForm").addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const name = document.querySelector('input[placeholder="Enter your name"]').value;
+    const email = document.querySelector('input[type="email"]').value;
+    const subject = document.querySelector('select').value;
+    const message = document.querySelector('textarea').value;
+
+    const phoneNumber = "923256673856"; 
+    const whatsappMessage =
+      `Hello Book Villa Support,%0A%0A` +
+      `👤 Name: ${name}%0A` +
+      `📧 Email: ${email}%0A` +
+      `📌 Subject: ${subject}%0A%0A` +
+      `📝 Message:%0A${message}`;
+
+    const whatsappURL =
+      `https://wa.me/${phoneNumber}?text=${whatsappMessage}`;
+
+    window.open(whatsappURL, "_blank");
+  });
+</script>
+
+</body>
+</html>

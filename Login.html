@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join the Community | Book Villa</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../style/login.css">
+</head>
+<body>
+
+    <div class="auth-container">
+        <div class="auth-visual">
+            <div class="visual-content">
+                <h1>Unlock a World of Knowledge.</h1>
+                <p>Join over 1.2 million students and professionals accessing the world's most curated academic library.</p>
+            </div>
+        </div>
+
+        <div class="auth-form-side">
+            <a href="#" class="brand-logo"><i class="fas fa-book-open"></i> BOOK VILLA</a>
+
+            <div class="form-header">
+                <h2 id="formTitle">Welcome Back</h2>
+                <p id="formSubtitle">Enter your credentials to access your library.</p>
+            </div>
+
+            <div class="auth-tabs">
+                <button id="loginTab" class="tab-btn active" onclick="showTab('login')">Login</button>
+                <button id="signupTab" class="tab-btn" onclick="showTab('signup')">Create Account</button>
+            </div>
+
+            <form id="loginForm">
+                <div class="input-group">
+                    <label>Email Address</label>
+                    <input type="email" class="input-field" placeholder="name@company.com" required>
+                </div>
+                <div class="input-group">
+                    <label>Password</label>
+                    <input type="password" class="input-field" placeholder="••••••••" required>
+                </div>
+                <div class="options-row">
+                    <label style="display: flex; align-items: center; gap: 8px; cursor: pointer;">
+                        <input type="checkbox"> Remember me
+                    </label>
+                    <a href="#">Forgot Password?</a>
+                </div>
+                
+                <button type="submit" class="submit-btn">Sign In</button>
+            </form>
+
+            <form id="signupForm" style="display: none;">
+                <div class="input-group">
+                    <label>Full Name</label>
+                    <input type="text" class="input-field" placeholder="John Doe" required>
+                </div>
+                <div class="input-group">
+                    <label>Email Address</label>
+                    <input type="email" class="input-field" placeholder="name@company.com" required>
+                </div>
+                <div class="input-group">
+                    <label>Password</label>
+                    <input type="password" class="input-field" placeholder="Min. 8 characters" required>
+                </div>
+                <button type="submit" class="submit-btn">Create Account</button>
+            </form>
+
+            <div class="divider">Or continue with</div>
+
+            <div class="social-grid">
+                <a href="#" class="social-btn">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg" width="18"> Google
+                </a>
+                <a href="#" class="social-btn">
+                    <i class="fab fa-apple" style="font-size: 18px;"></i> Apple
+                </a>
+            </div>
+
+            <div class="auth-footer">
+                &copy; 2025 Book Villa — Secure Authentication System
+            </div>
+        </div>
+    </div>
+
+ <script>
+  function showTab(tab) {
+    const loginForm = document.getElementById('loginForm');
+    const signupForm = document.getElementById('signupForm');
+    const loginTab = document.getElementById('loginTab');
+    const signupTab = document.getElementById('signupTab');
+    const title = document.getElementById('formTitle');
+    const subtitle = document.getElementById('formSubtitle');
+
+    if (tab === 'login') {
+      loginForm.style.display = 'block';
+      signupForm.style.display = 'none';
+      loginTab.classList.add('active');
+      signupTab.classList.remove('active');
+      title.innerText = 'Welcome Back';
+      subtitle.innerText = 'Enter your credentials to access your library.';
+    } else {
+      loginForm.style.display = 'none';
+      signupForm.style.display = 'block';
+      loginTab.classList.remove('active');
+      signupTab.classList.add('active');
+      title.innerText = 'Join Book Villa';
+      subtitle.innerText = 'Start your journey with a free account today.';
+    }
+  }
+
+  // 🔐 LOGIN FORM REDIRECT
+  document.getElementById("loginForm").addEventListener("submit", function (e) {
+    e.preventDefault(); // prevent page reload
+
+    // Optional: add validation here
+
+    // Redirect after login
+    window.location.href = "./Home Page.html";
+  });
+
+  // 📝 SIGNUP FORM REDIRECT (optional)
+  document.getElementById("signupForm").addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    alert("Account created successfully!");
+    window.location.href = "./Home Page.html";
+  });
+</script>
+
+</body>
+</html>

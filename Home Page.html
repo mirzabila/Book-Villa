@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Book Villa | Pakistan's Premier Academic Bookstore</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="../style/home.css" />
+  </head>
+  <body>
+    <header>
+      <div class="logo"><i class="fas fa-book-open"></i> BOOK VILLA</div>
+
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#products">Products</a></li>
+        <li><a href="#collection">Collection</a></li>
+        <li><a href="#about">About us</a></li>
+        <li><a href="#contact">Contact us</a></li>
+      </ul>
+
+      <div class="search-container">
+        <i class="fas fa-search" style="color: rgb(71, 69, 69)"></i>
+        <input
+          type="text"
+          placeholder="Search textbooks, authors, or ISBN..."
+        />
+      </div>
+
+      <!-- <div class="header-btns">
+        <div class="cart-icon">
+          <i class="fas fa-shopping-bag"></i>
+          <span class="cart-badge">0</span>
+        </div> -->
+       
+      </div>
+    </header>
+
+    <section class="hero" id="home">
+      <div class="hero-text">
+        <div
+          style="
+            background: var(--primary-dark);
+            color: #000;
+            display: inline-block;
+            padding: 5px 15px;
+            border-radius: 50px;
+            font-size: 12px;
+            font-weight: 800;
+            margin-bottom: 20px;
+          "
+        >
+          <i class="fas fa-check-circle"></i> OFFICIAL UNIVERSITY PARTNER
+        </div>
+        <h1>Your Gateway to <br /><span>Academic Success.</span></h1>
+        <p>
+          Pakistan's most trusted platform for original Medical, Engineering,
+          and CS textbooks. Curated by professors, delivered to students.
+        </p>
+        <div style="display: flex; gap: 20px">
+          <a href="./Products.html">
+            <button class="btn-main">Start Shopping</button>
+          </a>
+          <!-- <a href="./Products.html">
+            <button class="btn-secondary">View Catalog</button>
+          </a> -->
+        </div>
+      </div>
+    </section>
+
+    <div class="value-prop-bar">
+      <div class="prop-item">
+        <div class="prop-icon"><i class="fas fa-truck-fast"></i></div>
+        <div class="prop-text">
+          <h4>Free 24h Delivery</h4>
+          <p>On all orders above Rs. 3000</p>
+        </div>
+      </div>
+      <div class="prop-item">
+        <div class="prop-icon"><i class="fas fa-shield-check"></i></div>
+        <div class="prop-text">
+          <h4>100% Original Books</h4>
+          <p>Sourced directly from publishers</p>
+        </div>
+      </div>
+      <div class="prop-item">
+        <div class="prop-icon"><i class="fas fa-hand-holding-dollar"></i></div>
+        <div class="prop-text">
+          <h4>Cash on Delivery</h4>
+          <p>Pay securely when you receive</p>
+        </div>
+      </div>
+      <div class="prop-item">
+        <div class="prop-icon"><i class="fas fa-rotate-left"></i></div>
+        <div class="prop-text">
+          <h4>7-Day Returns</h4>
+          <p>No questions asked replacement</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="trust-bar" style="margin-top: 40px">
+      <i>OXFORD PRESS</i>
+      <i>Mc Graw Hill</i>
+      <i>PEARSON</i>
+      <i>WILEY ACADEMIC</i>
+      <i>CAMBRIDGE</i>
+    </div>
+
+    <div class="flash-sale">
+      <div>
+        <h2 style="font-size: 28px">🔥 Mid-Semester Sale</h2>
+        <p style="color: var(--text-dim)">
+          Flat 25% off on all Engineering & Math reference books.
+        </p>
+      </div>
+      <div class="timer">
+        <div class="time-box"><span>08</span><small>Hrs</small></div>
+        <div class="time-box"><span>45</span><small>Min</small></div>
+        <div class="time-box"><span>22</span><small>Sec</small></div>
+      </div>
+      <a href="./Products.html">
+        <button class="btn-main" style="background: #fff">Shop Sale</button>
+      </a>
+    </div>
+
+    <section id="products">
+      <div class="section-header">
+        <div>
+          <h2>Trending Now</h2>
+          <p>
+            The most popular textbooks among university students this month.
+          </p>
+        </div>
+        <a href="./Products.html">
+          <button class="btn-secondary" style="padding: 12px 24px">
+            View All Books
+          </button>
+        </a>
+      </div>
+
+      <div class="book-grid">
+        <div class="book-card">
+          <span class="tag">Bestseller</span>
+          <div class="book-img-wrapper">
+            <img src="https://picsum.photos/seed/cs1/400/600" />
+          </div>
+          <div class="book-info">
+            <p>Computer Science</p>
+            <h3>Introduction to Algorithms</h3>
+            <p>CLRS Team</p>
+            <div class="book-price">
+              Rs. 2,450 <span class="old-price">Rs. 3,100</span>
+            </div>
+            <button
+              class="btn-main"
+              style="width: 100%; margin-top: 15px; padding: 12px"
+            >
+              Add to Cart
+            </button>
+          </div>
+        </div>
+        <div class="book-card">
+          <span class="tag" style="background: #ef4444; color: white"
+            >Limited Stock</span
+          >
+          <div class="book-img-wrapper">
+            <img src="https://picsum.photos/seed/med2/400/600" />
+          </div>
+          <div class="book-info">
+            <p>Medical</p>
+            <h3>Guyton and Hall Physiology</h3>
+            <p>John E. Hall</p>
+            <div class="book-price">Rs. 5,200</div>
+            <button
+              class="btn-main"
+              style="width: 100%; margin-top: 15px; padding: 12px"
+            >
+              Add to Cart
+            </button>
+          </div>
+        </div>
+        <div class="book-card">
+          <div class="book-img-wrapper">
+            <img src="https://picsum.photos/seed/eng2/400/600" />
+          </div>
+          <div class="book-info">
+            <p>Engineering</p>
+            <h3>Mechanics of Materials</h3>
+            <p>R.C. Hibbeler</p>
+            <div class="book-price">Rs. 3,800</div>
+            <button
+              class="btn-main"
+              style="width: 100%; margin-top: 15px; padding: 12px"
+            >
+              Add to Cart
+            </button>
+          </div>
+        </div>
+        <div class="book-card">
+          <span class="tag" style="background: #3b82f6">New Edition</span>
+          <div class="book-img-wrapper">
+            <img src="https://picsum.photos/seed/bus1/400/600" />
+          </div>
+          <div class="book-info">
+            <p>Business</p>
+            <h3>Principles of Marketing</h3>
+            <p>Philip Kotler</p>
+            <div class="book-price">Rs. 2,100</div>
+            <button
+              class="btn-main"
+              style="width: 100%; margin-top: 15px; padding: 12px"
+            >
+              Add to Cart
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="author-spotlight" id="collection">
+      <div class="author-img">
+        <img
+          src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?fit=crop&w=800&q=80"
+          alt="Author"
+        />
+      </div>
+      <div class="author-content">
+        <span class="author-tag">AUTHOR OF THE MONTH</span>
+        <h2>Prof. Dr. Ahmed Hassan</h2>
+        <p>
+          A leading voice in Pakistani academia, Dr. Hassan's textbooks on
+          advanced physics and mathematics are used in top universities across
+          the country. Known for simplifying complex concepts for students.
+        </p>
+        <div class="author-stats">
+          <div class="stat-item">
+            <h3>15+</h3>
+            <p>Published Books</p>
+          </div>
+          <div class="stat-item">
+            <h3>50k+</h3>
+            <p>Copies Sold</p>
+          </div>
+          <div class="stat-item">
+            <h3>4.9/5</h3>
+            <p>Avg Rating</p>
+          </div>
+        </div>
+        <a href="./Collection.html">
+        <button class="btn-main">View Author's Collection</button>
+        </a>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="bundle-banner" style="margin: 0">
+        <div class="bundle-content">
+          <h2 style="font-size: 42px; line-height: 1.1; margin-bottom: 20px">
+            The Complete <br /><span>Exam Prep Kit</span>
+          </h2>
+          <p style="color: #ccc; margin-bottom: 30px">
+            Includes past papers, solved solutions, and quick revision guides.
+            Everything you need to ace your finals.
+          </p>
+          <button class="btn-main">Order Kit Now</button>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-header">
+        <div>
+          <h2>Trusted by Students</h2>
+          <p>See what your peers are saying about Book Villa.</p>
+        </div>
+      </div>
+      <div class="testimonials">
+        <div class="testimonial-card">
+          <p class="testimonial-text">
+            "Finding original medical books was a nightmare until I found Book
+            Villa. Their delivery is super fast and the books are genuine.
+            Lifesaver for exam season!"
+          </p>
+          <div class="student-profile">
+            <div
+              class="student-img"
+              style="
+                background: url('https://i.pravatar.cc/100?img=5') center/cover;
+              "
+            ></div>
+            <div class="student-info">
+              <h4>Sarah Khan</h4>
+              <p>MBBS Student, KEMU</p>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <p class="testimonial-text">
+            "The semester bundle deals are amazing. I saved so much money
+            compared to buying books individually from the market. Highly
+            recommended for engineering students."
+          </p>
+          <div class="student-profile">
+            <div
+              class="student-img"
+              style="
+                background: url('https://i.pravatar.cc/100?img=8') center/cover;
+              "
+            ></div>
+            <div class="student-info">
+              <h4>Ali Raza</h4>
+              <p>Software Engineering, NUST</p>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <p class="testimonial-text">
+            "Their customer support is excellent. I needed a specific edition of
+            a finance book, and they sourced it for me within 3 days. Great
+            service."
+          </p>
+          <div class="student-profile">
+            <div
+              class="student-img"
+              style="
+                background: url('https://i.pravatar.cc/100?img=9') center/cover;
+              "
+            ></div>
+            <div class="student-info">
+              <h4>Zainab Ahmed</h4>
+              <p>BBA, LUMS</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  <footer id="contact">
+  <div class="footer-grid">
+    
+    <!-- Column 1 -->
+    <div class="footer-col">
+      <span class="footer-logo">
+        <i class="fas fa-book-open"></i> Book Villa
+      </span>
+
+      <p style="color: var(--text-dim); font-size: 14px; line-height: 1.8; margin-bottom: 25px;">
+        Book Villa is Pakistan's leading online academic bookstore,
+        dedicated to making quality education accessible. We connect
+        students with the resources they need to succeed.
+      </p>
+
+      <!-- Social Icons -->
+      <div style="display: flex; gap: 15px; margin-bottom: 20px;">
+        <i class="fab fa-facebook-f" style="font-size:18px;color:var(--text-dim);padding:10px;background:var(--bg-surface);border-radius:50%;cursor:pointer;"></i>
+        <i class="fab fa-instagram" style="font-size:18px;color:var(--text-dim);padding:10px;background:var(--bg-surface);border-radius:50%;cursor:pointer;"></i>
+        <i class="fab fa-twitter" style="font-size:18px;color:var(--text-dim);padding:10px;background:var(--bg-surface);border-radius:50%;cursor:pointer;"></i>
+        <i class="fab fa-linkedin-in" style="font-size:18px;color:var(--text-dim);padding:10px;background:var(--bg-surface);border-radius:50%;cursor:pointer;"></i>
+      </div>
+
+      <!-- Contact Us Button -->
+      <a href="./ContactUs.html" class="btn-main" style="padding:10px 24px; font-size:13px; display:inline-block; text-decoration:none;">
+        Contact Us
+      </a>
+    </div>
+
+    <!-- Column 2 -->
+    <div class="footer-links">
+      <h4>Shop Categories</h4>
+      <li><a href="#">Medical & Nursing</a></li>
+      <li><a href="#">Engineering & Tech</a></li>
+      <li><a href="#">Computer Science</a></li>
+      <li><a href="#">Business & Finance</a></li>
+      <li><a href="#">Competitive Exams</a></li>
+    </div>
+
+    <!-- Column 3 -->
+    <div class="footer-links">
+      <h4>Help & Support</h4>
+      <li><a href="#">Track Your Order</a></li>
+      <li><a href="#">Shipping Rates</a></li>
+      <li><a href="#">Returns & Exchanges</a></li>
+      <li><a href="#">FAQs</a></li>
+      <li><a href="#contact">Contact Us</a></li>
+    </div>
+
+    <!-- Column 4 -->
+    <div class="footer-links">
+      <h4>Get in Touch</h4>
+      <p><i class="fas fa-phone-alt" style="color:var(--primary); margin-right:10px;"></i>042-35789012</p>
+      <p><i class="fas fa-envelope" style="color:var(--primary); margin-right:10px;"></i>support@bookvilla.pk</p>
+      <p><i class="fas fa-map-marker-alt" style="color:var(--primary); margin-right:10px;"></i>Main Market, Gulberg II, Lahore</p>
+      <p style="margin-top:20px; color:var(--primary); font-weight:700;">
+        Mon - Sat: 9:00 AM - 8:00 PM
+      </p>
+    </div>
+
+  </div>
+
+  <!-- Bottom Bar -->
+  <div style="border-top:1px solid var(--border); padding-top:30px; color:var(--text-dim); font-size:13px; display:flex; justify-content:space-between; flex-wrap:wrap; gap:20px;">
+    <p>&copy; 2025 Book Villa. All Rights Reserved. A Project for Pakistani Students.</p>
+    <div style="display:flex; gap:20px;">
+      <a href="#" style="color:var(--text-dim); text-decoration:none;">Terms of Service</a>
+      <a href="#" style="color:var(--text-dim); text-decoration:none;">Privacy Policy</a>
+    </div>
+  </div>
+</footer>
+ 
+
+    <script>
+      // Cart Badge Logic
+      const cartBtns = document.querySelectorAll(".book-card .btn-main");
+      const badge = document.querySelector(".cart-badge");
+      let count = 0;
+      cartBtns.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          count++;
+          badge.innerText = count;
+          badge.style.animation = "pop 0.3s ease";
+          btn.innerText = "Added to Cart!";
+          btn.style.background = "#22c55e";
+          btn.style.color = "#fff";
+          setTimeout(() => {
+            btn.innerText = "Add to Cart";
+            btn.style.background = "var(--primary)";
+            btn.style.color = "#000";
+            badge.style.animation = "none";
+          }, 2000);
+        });
+      });
+
+      // Timer Logic
+      setInterval(() => {
+        const s = document.querySelectorAll(".time-box span")[2];
+        let val = parseInt(s.innerText);
+        val = val > 0 ? val - 1 : 59;
+        s.innerText = val.toString().padStart(2, "0");
+      }, 1000);
+    </script>
+    <style>
+      @keyframes pop {
+        0% {
+          transform: scale(1);
+        }
+        50% {
+          transform: scale(1.3);
+        }
+        100% {
+          transform: scale(1);
+        }
+      }
+    </style>
+  </body>
+</html>

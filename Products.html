@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Products | Book Villa</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style/products.css">
+</head>
+<body>
+
+<div class="bg-glow"></div>
+
+<header>
+    <a href="#" class="logo"><i class="fas fa-book-open"></i> BOOK VILLA</a>
+    <ul class="nav-links">
+        <li><a href="./Home Page.html">Home</a></li>
+        <li><a href="./Products.html">Products</a></li>
+        <li><a href="./Collection.html">Collection</a></li>
+        <li><a href="./AboutUs.html">About us</a></li>
+        <li><a href="./ContactUs.html">Contact us</a></li>
+    </ul>
+    <div style="display: flex; gap: 20px; align-items: center;">
+        <i class="fas fa-search" style="cursor: pointer; color: var(--text-dim);"></i>
+        <i class="fas fa-shopping-bag" style="cursor: pointer; position: relative;">
+            <span style="position: absolute; top: -8px; right: -8px; background: var(--primary); color: #000; font-size: 10px; width: 18px; height: 18px; display: flex; align-items: center; justify-content: center; border-radius: 50%; font-weight: 800;">0</span>
+        </i>
+    </div>
+</header>
+
+<div class="cat-bar">
+    <div class="cat-item active" data-category="all">All Books</div>
+    <div class="cat-item" data-category="Medical"><i class="fas fa-microscope"></i> Medical</div>
+    <div class="cat-item" data-category="Computer Science"><i class="fas fa-laptop-code"></i> Computer Science</div>
+    <div class="cat-item" data-category="Engineering"><i class="fas fa-gears"></i> Engineering</div>
+    <div class="cat-item" data-category="Law"><i class="fas fa-gavel"></i> Law</div>
+    <div class="cat-item" data-category="Business"><i class="fas fa-chart-line"></i> Business</div>
+    <div class="cat-item" data-category="Applied Chemistry"><i class="fas fa-flask"></i> Applied Chemistry</div>
+</div>
+
+<section class="page-header">
+    <p class="breadcrumbs">Shop / Professional Library</p>
+    <h1>Academic Resources</h1>
+</section>
+
+<div class="container">
+    <aside class="sidebar">
+        <div class="filter-group">
+            <h4>Authors</h4>
+            <ul class="filter-list">
+                <li><input type="checkbox" class="author-filter" value="Robert Lafore"> Robert Lafore</li>
+                <li><input type="checkbox" class="author-filter" value="E. Balagurusamy"> E. Balagurusamy</li>
+                <li><input type="checkbox" class="author-filter" value="Guyton & Hall"> Guyton & Hall</li>
+                <li><input type="checkbox" class="author-filter" value="Philip Kotler"> Philip Kotler</li>
+            </ul>
+        </div>
+        <div class="filter-group">
+            <h4>Binding</h4>
+            <ul class="filter-list">
+                <li><input type="checkbox" class="binding-filter" value="Hardcover"> Hardcover</li>
+                <li><input type="checkbox" class="binding-filter" value="Paperback"> Paperback</li>
+                <li><input type="checkbox" class="binding-filter" value="Digital Edition"> Digital Edition</li>
+            </ul>
+        </div>
+        <div class="filter-group">
+            <h4>Condition</h4>
+            <ul class="filter-list">
+                <li><input type="checkbox" class="condition-filter" value="New Edition" checked> New Edition</li>
+                <li><input type="checkbox" class="condition-filter" value="Used (Fine)"> Used (Fine)</li>
+            </ul>
+        </div>
+    </aside>
+
+    <main class="content-area">
+        <div class="controls">
+            <div class="search-bar">
+                <i class="fas fa-search"></i>
+                <input type="text" id="searchInput" placeholder="Search title, author or ISBN...">
+            </div>
+        </div>
+
+        <div class="product-grid" id="productGrid"></div>
+    </main>
+</div>
+
+<footer>
+    <div style="margin-bottom: 20px;">
+        <i class="fab fa-facebook" style="margin: 0 10px; font-size: 20px;"></i>
+        <i class="fab fa-instagram" style="margin: 0 10px; font-size: 20px;"></i>
+        <i class="fab fa-twitter" style="margin: 0 10px; font-size: 20px;"></i>
+    </div>
+    <p>&copy; 2025 Book Villa — Pakistan's Most Trusted Academic Bookstore.</p>
+</footer>
+
+<script>
+const products = [
+    {title:"C++ Programming", category:"Computer Science", author:"Robert Lafore", binding:"Hardcover", condition:"New Edition", price:1200, image:"https://picsum.photos/seed/cs_1/400/600", tag:"TRENDING"},
+    {title:"HTML & CSS Master", category:"Web Development", author:"E. Balagurusamy", binding:"Paperback", condition:"New Edition", price:1500, image:"https://picsum.photos/seed/web_2/400/600", tag:"20% OFF"},
+    {title:"Python Basics", category:"Computer Science", author:"Guyton & Hall", binding:"Digital Edition", condition:"New Edition", price:1400, image:"https://picsum.photos/seed/py_3/400/600"},
+    {title:"Data Structures", category:"Computer Science", author:"E. Balagurusamy", binding:"Hardcover", condition:"New Edition", price:1800, image:"https://picsum.photos/seed/ds_4/400/600"},
+    {title:"Gray's Anatomy", category:"Medical", author:"Philip Kotler", binding:"Hardcover", condition:"New Edition", price:4500, image:"https://picsum.photos/seed/med_6/400/600", tag:"NEW"},
+    
+    // New products added
+    {title:"Organic Chemistry", category:"Applied Chemistry", author:"Paula Bruice", binding:"Paperback", condition:"Used (Fine)", price:2200, image:"https://picsum.photos/seed/chem_7/400/600"},
+    {title:"Engineering Mechanics", category:"Engineering", author:"J.L. Meriam", binding:"Hardcover", condition:"New Edition", price:2500, image:"https://picsum.photos/seed/eng_8/400/600", tag:"TRENDING"},
+    {title:"Corporate Law Essentials", category:"Law", author:"R. Clarkson", binding:"Paperback", condition:"Used (Good)", price:1800, image:"https://picsum.photos/seed/law_9/400/600"},
+    {title:"Business Management 101", category:"Business", author:"Michael Porter", binding:"Digital Edition", condition:"New Edition", price:2000, image:"https://picsum.photos/seed/biz_10/400/600"},
+    {title:"Advanced Java", category:"Computer Science", author:"Herbert Schildt", binding:"Hardcover", condition:"Used (Fine)", price:1700, image:"https://picsum.photos/seed/java_11/400/600", tag:"20% OFF"},
+    {title:"Web Design with JavaScript", category:"Web Development", author:"Jon Duckett", binding:"Paperback", condition:"New Edition", price:1600, image:"https://picsum.photos/seed/webjs_12/400/600"},
+    {title:"Microbiology Basics", category:"Medical", author:"Tortora", binding:"Hardcover", condition:"Used (Good)", price:3000, image:"https://picsum.photos/seed/med2_13/400/600", tag:"NEW"},
+    {title:"Thermodynamics", category:"Engineering", author:"Cengel & Boles", binding:"Hardcover", condition:"New Edition", price:2700, image:"https://picsum.photos/seed/eng2_14/400/600"},
+    {title:"Financial Accounting", category:"Business", author:"Robert Anthony", binding:"Paperback", condition:"Used (Fine)", price:2100, image:"https://picsum.photos/seed/biz2_15/400/600"},
+    {title:"Civil Engineering Materials", category:"Engineering", author:"Shah & Kale", binding:"Digital Edition", condition:"New Edition", price:2300, image:"https://picsum.photos/seed/eng3_16/400/600"}
+];
+
+
+const productGrid = document.getElementById("productGrid");
+const searchInput = document.getElementById("searchInput");
+
+function renderProducts(data) {
+    productGrid.innerHTML = "";
+    if(data.length===0){
+        productGrid.innerHTML = "<p style='color:#999'>No products found</p>";
+        return;
+    }
+    data.forEach(p=>{
+        productGrid.innerHTML += `
+        <div class="product-card">
+            ${p.tag?`<span class="card-tag">${p.tag}</span>`:""}
+            <div class="img-container"><img src="${p.image}" alt="${p.title}"></div>
+            <div class="info">
+                <p>${p.category}</p>
+                <h3>${p.title}</h3>
+                <div class="rating">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                </div>
+                <div class="price-row"><span class="price">Rs. ${p.price}</span></div>
+                <div class="btn-group">
+                    <button class="btn-cart">Add to Cart</button>
+                    <button class="btn-buy">Buy Now</button>
+                </div>
+            </div>
+        </div>`;
+    });
+}
+
+// Initial render
+renderProducts(products);
+
+// --- Filtering logic ---
+function filterProducts() {
+    const searchTerm = searchInput.value.toLowerCase();
+    
+    const selectedAuthors = Array.from(document.querySelectorAll(".author-filter:checked")).map(i=>i.value);
+    const selectedBindings = Array.from(document.querySelectorAll(".binding-filter:checked")).map(i=>i.value);
+    const selectedConditions = Array.from(document.querySelectorAll(".condition-filter:checked")).map(i=>i.value);
+    const activeCategory = document.querySelector(".cat-item.active").dataset.category;
+
+    let filtered = products.filter(p=>{
+        const matchesSearch = p.title.toLowerCase().includes(searchTerm) || 
+                              p.author.toLowerCase().includes(searchTerm) || 
+                              p.category.toLowerCase().includes(searchTerm);
+
+        const matchesAuthor = selectedAuthors.length? selectedAuthors.includes(p.author) : true;
+        const matchesBinding = selectedBindings.length? selectedBindings.includes(p.binding) : true;
+        const matchesCondition = selectedConditions.length? selectedConditions.includes(p.condition) : true;
+        const matchesCategory = activeCategory==="all"? true : p.category===activeCategory;
+
+        return matchesSearch && matchesAuthor && matchesBinding && matchesCondition && matchesCategory;
+    });
+
+    renderProducts(filtered);
+}
+
+// Event listeners
+searchInput.addEventListener("input", filterProducts);
+
+document.querySelectorAll(".cat-item").forEach(cat=>{
+    cat.addEventListener("click", ()=>{
+        document.querySelectorAll(".cat-item").forEach(c=>c.classList.remove("active"));
+        cat.classList.add("active");
+        filterProducts();
+    });
+});
+
+document.querySelectorAll(".author-filter, .binding-filter, .condition-filter").forEach(input=>{
+    input.addEventListener("change", filterProducts);
+});
+</script>
+
+</body>
+</html>
